@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtArchive"
+        style="@android:style/Widget.Material.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:singleLine="true"
+        android:text="Archive File Location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelArchive" />
+
+    <Button
+        android:id="@+id/btnArchive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:onClick="openBrowseArchive"
+        android:text="Browse"
+        app:backgroundTint="#2ECC71"
+        app:layout_constraintStart_toEndOf="@+id/txtArchive"
+        app:layout_constraintTop_toBottomOf="@+id/labelArchive" />
+
+    <TextView
+        android:id="@+id/labelArchive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="Archive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtImage" />
+
+    <TextView
+        android:id="@+id/labelImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="124dp"
+        android:text="Image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtImage"
+        style="@android:style/Widget.Material.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:singleLine="true"
+        android:text="Image File Location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelImage" />
+
+    <Button
+        android:id="@+id/btnStart"
+        style="@android:style/Widget.Material.Light.Button"
+        android:layout_width="196dp"
+        android:layout_height="83dp"
+        android:text="Process"
+        app:backgroundTint="#0078D7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtArchive"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/btnImage"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:onClick="openBrowseImage"
+        android:text="Browse"
+        app:backgroundTint="#2ECC71"
+        app:layout_constraintStart_toEndOf="@+id/txtImage"
+        app:layout_constraintTop_toBottomOf="@+id/labelImage" />
+
+    <RadioGroup
+        android:id="@+id/rdbtn"
+        android:layout_width="146dp"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtArchive">
+
+        <RadioButton
+            android:id="@+id/rbtnRAR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="RAR" />
+
+        <RadioButton
+            android:id="@+id/rbtnZIP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ZIP" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
